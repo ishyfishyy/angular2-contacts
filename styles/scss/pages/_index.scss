@@ -1,5 +1,7 @@
+@use "../variables/colors";
+
 body {
-  color: $text-color;
+  color: colors.$text-color;
   padding-top: 70px;
 }
 

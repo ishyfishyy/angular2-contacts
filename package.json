@@ -1,37 +1,35 @@
 {
   "name": "angular2-contacts",
-  "version": "2.0.0-beta.11",
-  "description": "A simple contacts application to demonstrate the Angular 2 framework with Typescript.",
+  "version": "21.0.0",
+  "description": "A simple contacts application to demonstrate the Angular framework with Typescript.",
   "author": "Ismail Öz",
-  "jspm": {
-    "dependencies": {
-      "angular2": "npm:angular2@^2.0.0-beta.11",
-      "es6-shim": "github:es-shims/es6-shim@^0.35.0",
-      "reflect-metadata": "npm:reflect-metadata@^0.1.3",
-      "rxjs": "npm:rxjs@^5.0.0-beta.3",
-      "zone.js": "npm:zone.js@^0.6.4",
-      "jquery": "npm:jquery@^2.2.1",
-      "font-awesome": "npm:font-awesome@^4.5.0",
-      "bootstrap-sass": "github:twbs/bootstrap-sass@^3.3.6"
-    },
-    "devDependencies": {}
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^21.0.0",
+    "@angular/common": "^21.0.0",
+    "@angular/compiler": "^21.0.0",
+    "@angular/core": "^21.0.0",
+    "@angular/forms": "^21.0.0",
+    "@angular/platform-browser": "^21.0.0",
+    "@angular/platform-browser-dynamic": "^21.0.0",
+    "@angular/router": "^21.0.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0",
+    "bootstrap": "^5.3.0",
+    "font-awesome": "^4.7.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.11.1",
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-changed": "^1.3.0",
-    "gulp-load-plugins": "^1.2.0",
-    "gulp-minify": "0.0.5",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.2.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-tsb": "^1.10.1",
-    "gulp-typescript": "^2.12.1",
-    "gulp-uglify": "^1.5.3",
-    "run-sequence": "^1.1.5",
-    "vinyl-paths": "^2.1.0",
-    "typescript": "^1.8.9"
+    "@angular-devkit/build-angular": "^21.0.0",
+    "@angular/cli": "^21.0.0",
+    "@angular/compiler-cli": "^21.0.0",
+    "typescript": "~5.9.0"
   }
 }

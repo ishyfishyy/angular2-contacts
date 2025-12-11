@@ -1,35 +1,32 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
-    "module": "system",
-    "moduleResolution": "classic",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
     "sourceMap": true,
-    "emitDecoratorMetadata": true,
+    "declaration": false,
     "experimentalDecorators": true,
-    "removeComments": false,
-    "noImplicitAny": false
+    "moduleResolution": "bundler",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "useDefineForClassFields": false,
+    "lib": [
+      "ES2022",
+      "dom"
+    ]
   },
-  "exclude": [
-    "node_modules",
-    "jspm_packages"
-  ],
-  "filesGlob": [
-    "src/**/*.ts"
-  ],
-  "atom": {
-    "rewriteTsconfig": true
-  },
-  "files": [
-    "src/app.ts",
-    "src/contact-detail.ts",
-    "src/contact-list.ts",
-    "src/main.ts",
-    "src/nav-bar.ts",
-    "src/no-selection.ts",
-    "src/services/constants.ts",
-    "src/services/contact.ts",
-    "src/services/store.ts",
-    "src/converter/to-upper-case-converter.ts"
-  ]
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": false
+  }
 }
