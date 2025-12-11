@@ -23,7 +23,7 @@ export class ContactDetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       const id = +params['id'];
-      this._contactStore.find(id).then((contact: Contact | any) => {
+      this._contactStore.find(id).then((contact: Contact) => {
         this.selectedContact = JSON.parse(JSON.stringify(contact));
         this.originalContact = contact;
       });
@@ -31,7 +31,7 @@ export class ContactDetailComponent implements OnInit {
   }
 
   save(): void {
-    this._contactStore.save(this.selectedContact).then((contact: Contact | any) => {
+    this._contactStore.save(this.selectedContact).then((contact: Contact) => {
       this.selectedContact = JSON.parse(JSON.stringify(this.selectedContact));
       this.originalContact = contact;
     });

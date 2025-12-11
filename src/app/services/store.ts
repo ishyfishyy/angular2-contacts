@@ -27,8 +27,7 @@ export class ContactStore {
               contact.checked = false;
 
               return contact;
-            });
-            this.contacts = this.contacts.splice(0, 20);
+            }).slice(0, 20);
             this.updateStorage();
           },
           error: (err) => {
@@ -60,7 +59,7 @@ export class ContactStore {
     this.updateStorage();
   }
 
-  save(contact: Contact) {
+  save(contact: Contact): Promise<Contact> {
     return new Promise(executor => {
       let instance = JSON.parse(JSON.stringify(contact));
       let found: Contact = this.contacts.filter(x => x.id == contact.id)[0];
@@ -78,7 +77,7 @@ export class ContactStore {
     });
   }
 
-  find(id: number) {
+  find(id: number): Promise<Contact> {
     return new Promise(executor => {
       let found: Contact = this.contacts.filter(x => x.id == id)[0];
       executor(found);

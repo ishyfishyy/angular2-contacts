@@ -69,7 +69,7 @@ export class ContactListComponent {
 
   private printDuration(final: boolean): void {
     window.setTimeout((end: boolean) => {
-      var timing = +(new Date().getTime() - this.startTime.getTime());
+      var timing = +(Date.now() - this.startTime.getTime());
       this.average.push(timing);
       console.log(timing);
 
@@ -90,15 +90,15 @@ export class ContactListComponent {
     this.average = [];
     console.log('## Starting test ##');
 
-    for (var x = 0; x < this.REPEAT_TIMES; ++x) {
+    for (let x = 0; x < this.REPEAT_TIMES; ++x) {
       setTimeout((idx: number) => {
         this.startTiming();
 
-        var data: Array<Contact> = [];
+        let data: Array<Contact> = [];
         this.startTime = new Date();
 
-        for (var i = 0; i < this.TOTAL_COUNT; ++i) {
-          var contact: Contact = new Contact();
+        for (let i = 0; i < this.TOTAL_COUNT; ++i) {
+          let contact: Contact = new Contact();
           contact.id = i;
           contact.username = 'USERNAME ' + Math.abs(Math.random());
           contact.email = 'USERNAME@EMAIL.COM';
