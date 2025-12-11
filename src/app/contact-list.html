@@ -9,13 +9,13 @@
 
 	<table class="table table-bordered">
 		<tbody>
-			<tr *ngFor="#contact of filteredContacts">
+			<tr *ngFor="let contact of filteredContacts">
 				<td class="center-checkbox">
 					<input type="checkbox" value="1" id="{{contact.id}}" [(ngModel)]="contact.checked" (change)="checked()"/>
 				</td>
 
 				<td [ngClass]="{active: selectedId === contact.id}">
-					<a [routerLink]="['Contacts', {id: contact.id}]">
+					<a [routerLink]="['/contacts', contact.id]">
 						<label>{{contact.username | toUpperCase}}</label><br/>
 						<small>{{contact.email}}</small>
 					</a>

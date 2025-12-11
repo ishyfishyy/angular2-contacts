@@ -1,5 +1,24 @@
+# Node
 node_modules
-jspm_packages
+npm-debug.log
+yarn-error.log
+
+# Angular
 dist
+.angular
+.sass-cache
+/out-tsc
+
+# IDE
 .idea
 .vscode
+*.swp
+*.swo
+*~
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Old JSPM packages
+jspm_packages

@@ -10,18 +10,18 @@
 				<img class="img-circle contact-image" [src]="selectedContact.avatarUrl"/>
 			</div>
 
-			<input type="text" id="contact-username" placeholder="Username" class="contact-username invisible-input" [(ngModel)]="selectedContact.username">
+			<input type="text" id="contact-username" name="username" placeholder="Username" class="contact-username invisible-input" [(ngModel)]="selectedContact.username">
 			<hr/>
 
  			<form class="form-horizontal">
 				<div class="form-group">
 					<label class="contact-email">Email</label>
-					<input type="text" id="contact-email" placeholder="Email" class="form-control" [(ngModel)]="selectedContact.email">
+					<input type="text" id="contact-email" name="email" placeholder="Email" class="form-control" [(ngModel)]="selectedContact.email">
 				</div>
 
 				<div class="form-group">
 					<label class="contact-description">Description</label>
-					<input type="text" id="contact-description" placeholder="Description" class="form-control" [(ngModel)]="selectedContact.description">
+					<input type="text" id="contact-description" name="description" placeholder="Description" class="form-control" [(ngModel)]="selectedContact.description">
 				</div>
 			</form>
 
